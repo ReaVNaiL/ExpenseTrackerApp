@@ -1,0 +1,48 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ExpenseTracker" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#1A1E45</item>
+        <item name="colorPrimaryVariant">#015794</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">#414F75</item>
+        <item name="colorOnSecondary">#1A1E28</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.ExpenseTracker.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ExpenseTracker.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.ExpenseTracker.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="RoundStyleDialogTheme" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_top</item>
+        <item name="android:background">@drawable/rounded_background</item>
+        <item name="cornerSize">20dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="RoundStyle" parent="">
+        <item name="android:background">@drawable/rounded_background</item>
+        <item name="cornerSize">20dp</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="ButtonAsSpinner" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/rounded_button_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+</resources>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ExpenseTracker</string>
+    <string name="title_activity_dashboard">DASHBOARD</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="placeholder_jan_29">Jan 29</string>
+    <string name="placeholder_walmart_online_grocery">Walmart Online Grocery</string>
+    <string name="placeholder_8_92">$8.92</string>
+    <string name="expense_dashboard">DASHBOARD</string>
+    <string name="main_expenses">Settings</string>
+    <string name="main_dashboard">DASHBOARD</string>
+    <string name="main_exit">Exit</string>
+    <string name="main_budget_tracker">Budget Tracker</string>
+    <string name="placeholder_image">empty</string>
+    <string name="placeholder_jan_01_2022">JAN 01 2022</string>
+    <string name="enter_expense_name">Enter expense name . . .</string>
+    <string name="placeholder_expense_0_00">0.00</string>
+    <string name="dollar_sign">$</string>
+    <string name="expense_date">Date:</string>
+    <string name="cancel_button_text">Cancel</string>
+    <string name="save_button_text">Save</string>
+</resources>
