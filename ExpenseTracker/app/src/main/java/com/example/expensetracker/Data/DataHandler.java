@@ -213,4 +213,16 @@ public class DataHandler extends ExpenseDbContext {
 
         return categoryList;
     }
+
+    public void updateCategory(String categoryName, double budget) {
+        try {
+            ContentValues values = new ContentValues();
+
+            values.put(KEY_CATEGORY_BUDGET, budget);
+
+            dbContext.update(TABLE_CATEGORIES, values, KEY_CATEGORY_NAME + " = '" + categoryName + "'", null);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

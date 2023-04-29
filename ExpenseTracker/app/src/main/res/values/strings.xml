@@ -33,4 +33,18 @@
     <string name="date">Date:</string>
     <string name="jan_01_2020">JAN 01 2020</string>
     <string name="back_to_dashboard">Back</string>
+    <string name="settings">BUDGET SETTINGS</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="travel">Travel</string>
+    <string name="entertainment">Entertain.</string>
+    <string name="health">Health</string>
+    <string name="other">Other</string>
+    <string name="enter_budget">Enter restaurant budget.</string>
+    <string name="enter_groceries_budget">Enter Groceries Budget</string>
+    <string name="enter_travel_budget">Enter Travel Budget</string>
+    <string name="enter_entertainment_budget">Enter Entertainment Budget</string>
+    <string name="enter_health_budget">Enter Health Budget</string>
+    <string name="enter_other_budget">Enter Other Budget</string>
+    <string name="todo">TODO</string>
+    <string name="todo2">TODO</string>
 </resources>

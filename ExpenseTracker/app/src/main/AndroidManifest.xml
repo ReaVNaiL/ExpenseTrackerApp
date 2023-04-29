@@ -12,7 +12,7 @@
         android:theme="@style/Theme.ExpenseTracker"
         tools:targetApi="31">
         <activity
-            android:name=".SettingsEditActivity"
+            android:name=".Views.Settings.SettingsEditActivity"
             android:exported="false" />
         <activity
             android:name=".Views.TransactionDetails.TransactionDetailsActivity"

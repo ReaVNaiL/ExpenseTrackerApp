@@ -9,12 +9,12 @@
 
     <TextView
         android:id="@+id/title_text_intro"
-        android:layout_width="230dp"
-        android:layout_height="129dp"
+        android:layout_width="243dp"
+        android:layout_height="172dp"
         android:gravity="center"
         android:text="@string/main_budget_tracker"
-        android:textColor="@color/white"
-        android:textSize="34sp"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +45,7 @@
             android:text="@string/main_dashboard" />
 
         <Button
-            android:id="@+id/expenses_button"
+            android:id="@+id/settings_button"
             android:layout_width="280dp"
             android:layout_height="65dp"
             android:layout_marginBottom="20dp"
@@ -58,5 +58,37 @@
             android:layout_marginBottom="20dp"
             android:text="@string/main_exit" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="96dp"
+        android:layout_height="214dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/todo"
+        android:rotation="-45"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.308"
+        app:srcCompat="?android:attr/fingerprintAuthDrawable"
+        app:tint="?attr/colorSecondaryVariant" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="144dp"
+        android:layout_height="238dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/todo2"
+        android:rotation="45"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.996"
+        app:srcCompat="?android:attr/fingerprintAuthDrawable"
+        app:tint="?attr/colorSecondaryVariant" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

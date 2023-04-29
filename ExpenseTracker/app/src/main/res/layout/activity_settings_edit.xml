@@ -4,172 +4,268 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorOnSecondary"
     tools:context=".Views.Settings.SettingsEditActivity">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="59dp" />
+        android:text="@string/settings"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="415dp"
         android:layout_height="549dp"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="116dp">
+        app:layout_constraintBottom_toTopOf="@+id/main_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="VisualLintBounds">
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
+            android:layout_width="95dp"
+            android:layout_height="25dp"
+            android:text="@string/restaurant"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/textView5"
-            app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
+            app:layout_constraintEnd_toStartOf="@+id/restaurant_budget"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="TextSizeCheck" />
 
         <EditText
-            android:id="@+id/editTextNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/restaurant_budget"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:backgroundTint="?attr/colorOnPrimary"
             android:ems="10"
+            android:gravity="center"
+            android:hint="@string/enter_budget"
             android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
+            android:textColor="?attr/colorOnPrimary"
+            android:textColorHint="#9E9D9D"
+            app:layout_constraintBottom_toTopOf="@+id/groceries_budget"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/textView3"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintVertical_bias="0.5"
+            android:autofillHints="" />
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
+            android:layout_width="95dp"
+            android:layout_height="25dp"
+            android:textSize="18sp"
+            android:text="@string/groceries"
+            android:textColor="?attr/colorOnPrimary"
             app:layout_constraintBottom_toTopOf="@+id/textView6"
-            app:layout_constraintEnd_toStartOf="@+id/editTextNumber2"
+            app:layout_constraintEnd_toStartOf="@+id/groceries_budget"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="TextSizeCheck" />
 
         <EditText
-            android:id="@+id/editTextNumber2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/groceries_budget"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:backgroundTint="?attr/colorOnPrimary"
             android:ems="10"
+            android:gravity="center"
+            android:hint="@string/enter_groceries_budget"
             android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/editTextNumber3"
+            android:textColor="?attr/colorOnPrimary"
+            android:textColorHint="#9E9D9D"
+            app:layout_constraintBottom_toTopOf="@+id/travel_budget"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintTop_toBottomOf="@+id/restaurant_budget"
+            app:layout_constraintVertical_bias="0.5"
+            android:autofillHints="" />
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SETTINGS"
+            android:layout_width="95dp"
+            android:layout_height="25dp"
+            android:text="@string/travel"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/textView8"
-            app:layout_constraintEnd_toStartOf="@+id/editTextNumber3"
+            app:layout_constraintEnd_toStartOf="@+id/travel_budget"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="TextSizeCheck" />
 
         <EditText
-            android:id="@+id/editTextNumber3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/travel_budget"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:backgroundTint="?attr/colorOnPrimary"
             android:ems="10"
+            android:gravity="center"
+            android:hint="@string/enter_travel_budget"
+            android:textColor="?attr/colorOnPrimary"
             android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/editTextNumber5"
+            android:textColorHint="#9E9D9D"
+            app:layout_constraintBottom_toTopOf="@+id/entertainment_budget"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintTop_toBottomOf="@+id/groceries_budget"
+            app:layout_constraintVertical_bias="0.5"
+            android:autofillHints="" />
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
+            android:layout_width="95dp"
+            android:layout_height="25dp"
+            android:text="@string/entertainment"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/textView9"
-            app:layout_constraintEnd_toStartOf="@+id/editTextNumber5"
+            app:layout_constraintEnd_toStartOf="@+id/entertainment_budget"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="TextSizeCheck" />
 
         <EditText
-            android:id="@+id/editTextNumber5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/entertainment_budget"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:autofillHints=""
+            android:backgroundTint="?attr/colorOnPrimary"
             android:ems="10"
+            android:gravity="center"
+            android:hint="@string/enter_entertainment_budget"
             android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/editTextNumber4"
+            android:textColor="?attr/colorOnPrimary"
+            android:textColorHint="#9E9D9D"
+            app:layout_constraintBottom_toTopOf="@+id/health_budget"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/textView8"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber3"
+            app:layout_constraintTop_toBottomOf="@+id/travel_budget"
             app:layout_constraintVertical_bias="0.5" />
 
         <TextView
             android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
+            android:layout_width="95dp"
+            android:layout_height="25dp"
+            android:text="@string/health"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/textView10"
-            app:layout_constraintEnd_toStartOf="@+id/editTextNumber4"
+            app:layout_constraintEnd_toStartOf="@+id/health_budget"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="TextSizeCheck,TextSizeCheck" />
 
         <EditText
-            android:id="@+id/editTextNumber4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/health_budget"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:backgroundTint="?attr/colorOnPrimary"
             android:ems="10"
+            android:gravity="center"
             android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/editTextNumber6"
+            android:textColor="?attr/colorOnPrimary"
+            android:textColorHint="#9E9D9D"
+            android:hint="@string/enter_health_budget"
+            app:layout_constraintBottom_toTopOf="@+id/other_budget"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/textView9"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber5"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintTop_toBottomOf="@+id/entertainment_budget"
+            app:layout_constraintVertical_bias="0.5"
+            android:autofillHints="" />
 
         <TextView
             android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
+            android:layout_width="95dp"
+            android:layout_height="25dp"
+            android:text="@string/other"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/editTextNumber6"
+            app:layout_constraintEnd_toStartOf="@+id/other_budget"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="TextSizeCheck" />
 
         <EditText
-            android:id="@+id/editTextNumber6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/other_budget"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:backgroundTint="?attr/colorOnPrimary"
             android:ems="10"
+            android:gravity="center"
+            android:hint="@string/enter_other_budget"
             android:inputType="number"
+            android:textColor="?attr/colorOnPrimary"
+            android:textColorHint="#9E9D9D"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/textView10"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber4"
-            app:layout_constraintVertical_bias="0.5" />
+            app:layout_constraintTop_toBottomOf="@+id/health_budget"
+            app:layout_constraintVertical_bias="0.5"
+            android:autofillHints="" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/main_back"
+        android:layout_width="150dp"
+        android:layout_height="56dp"
+        android:backgroundTint="#F44336"
+        android:text="@string/back_to_dashboard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/main_save"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/main_save"
+        android:layout_width="150dp"
+        android:layout_height="56dp"
+        android:backgroundTint="#8BC34A"
+        android:text="@string/save_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/main_back"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
