@@ -11,7 +11,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="placeholder_jan_29">Jan 29</string>
     <string name="placeholder_walmart_online_grocery">Walmart Online Grocery</string>
-    <string name="placeholder_8_92">$8.92</string>
+    <string name="placeholder_8_92">8.92</string>
     <string name="expense_dashboard">DASHBOARD</string>
     <string name="main_expenses">Settings</string>
     <string name="main_dashboard">DASHBOARD</string>
@@ -25,4 +25,12 @@
     <string name="expense_date">Date:</string>
     <string name="cancel_button_text">Cancel</string>
     <string name="save_button_text">Save</string>
+    <string name="total">Total:</string>
+    <string name="_500_00">500.00</string>
+    <string name="merchant">Merchant:</string>
+    <string name="category">Category:</string>
+    <string name="groceries">Groceries</string>
+    <string name="date">Date:</string>
+    <string name="jan_01_2020">JAN 01 2020</string>
+    <string name="back_to_dashboard">Back</string>
 </resources>

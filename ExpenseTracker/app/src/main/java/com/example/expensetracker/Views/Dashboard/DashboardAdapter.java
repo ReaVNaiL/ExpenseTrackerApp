@@ -36,10 +36,12 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Expe
 
         holder.expensesItemName.setText(expense.getName());
         holder.expensesItemAmount.setText(String.valueOf(expense.getAmount()));
-        String date = expense.getDate().toString();
+        String date = expense.getDate();
 
         String toDisplay = date.substring(0, 3) + " " + date.substring(4, 7);
         holder.expensesItemDate.setText(toDisplay);
+
+        holder.itemView.setOnClickListener(view -> setUpdateExpensesDialog(expense, view));
     }
 
     @Override
@@ -56,6 +58,10 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Expe
         if (clickedHolder != null) {
             createItemAnimator(clickedHolder.itemView).start();
         }
+
+        DashboardViewListActivity dashboardViewListActivity = (DashboardViewListActivity) view.getContext();
+
+        dashboardViewListActivity.updateExpense(expense);
     }
 
     private AnimatorSet createItemAnimator(View view) {

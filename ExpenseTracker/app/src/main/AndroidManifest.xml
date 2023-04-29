@@ -12,7 +12,13 @@
         android:theme="@style/Theme.ExpenseTracker"
         tools:targetApi="31">
         <activity
-            android:name=".AddExpenseDialog"
+            android:name=".SettingsEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Views.TransactionDetails.TransactionDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Views.AddExpense.AddExpenseDialog"
             android:exported="false" />
         <activity
             android:name=".Views.Dashboard.DashboardViewListActivity"

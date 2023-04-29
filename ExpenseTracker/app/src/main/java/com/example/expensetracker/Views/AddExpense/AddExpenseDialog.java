@@ -5,6 +5,7 @@ import static com.example.expensetracker.Helpers.DateUtility.getCurrentDate;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +24,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.fragment.app.DialogFragment;
 
@@ -95,9 +97,6 @@ public class AddExpenseDialog extends DialogFragment {
     }
 
     private void saveExpense(View view) {
-        // Retrieve values from form
-        dbContext.open();
-
         Expense expense = new Expense();
 
         expense.setDate(datePickerButton.getText().toString());
@@ -120,8 +119,6 @@ public class AddExpenseDialog extends DialogFragment {
         if (dashboardActivity != null) {
             dashboardActivity.refreshExpensesList();
         }
-
-        dbContext.close();
 
         dismiss();
     }
@@ -164,8 +161,23 @@ public class AddExpenseDialog extends DialogFragment {
             categoryNames.add(category.getName());
         }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, categoryNames);
+        // Create a custom adapter that sets the text color for each item
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, categoryNames) {
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View view = super.getView(position, convertView, parent);
+
+                if (view != null) {
+                    ((TextView) view).setTextColor(Color.WHITE);
+                }
+
+                return view;
+            }
+        };
+
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         categorySpinner.setAdapter(adapter);
+        categorySpinner.setSelection(0, true);
     }
+
 }

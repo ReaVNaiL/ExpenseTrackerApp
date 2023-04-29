@@ -6,47 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".Views.Dashboard.DashboardViewListActivity">
 
-    <TextView
-        android:id="@+id/dashboard_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="@string/expense_dashboard"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="24sp"
-        android:typeface="normal"
-        android:textColor="?attr/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <View
-        android:id="@+id/divider"
-        android:layout_width="250dp"
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="?attr/colorPrimary"
+        android:layout_marginTop="630dp"
+        android:background="?attr/colorOnPrimary"
         android:outlineAmbientShadowColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/expenses_recycler_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dashboard_label" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/dashboard_label"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:popupTheme="@style/Theme.ExpenseTracker.PopupOverlay"
-        tools:layout_editor_absoluteX="0dp" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_expense_button"
-        app:tint="@android:color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
@@ -54,21 +27,87 @@
         app:backgroundTint="?attr/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintHorizontal_bias="0.929"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/expenses_recycler_view"
-        app:layout_constraintVertical_bias="0.551"
+        app:layout_constraintTop_toBottomOf="@+id/divider4"
+        app:layout_constraintVertical_bias="0.456"
         app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="@android:color/white"
         tools:ignore="ImageContrastCheck" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/expenses_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="535dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="250dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/colorPrimary"
+        android:outlineAmbientShadowColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_label" />
+
+    <TextView
+        android:id="@+id/dashboard_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/expense_dashboard"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/bar_chart"
+        android:layout_width="418dp"
+        android:layout_height="176dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.588" />
+        app:layout_constraintTop_toBottomOf="@+id/divider3"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="220dp"
+        android:background="?attr/colorOnPrimary"
+        android:outlineAmbientShadowColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_label" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/expenses_recycler_view"
+        android:layout_width="417dp"
+        android:layout_height="382dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/back_menu_button"
+        android:layout_width="178dp"
+        android:layout_height="56dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/add_expense_button"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider4"
+        app:layout_constraintVertical_bias="0.461" />
 </androidx.constraintlayout.widget.ConstraintLayout>
