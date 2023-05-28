@@ -1,4 +1,10 @@
 # Budget Tracker App
+<p>
+    <img width=335 height=425 src="https://github.com/ReaVNaiL/ExpenseTrackerApp/assets/59776018/f97e2804-23a1-4852-96d3-0c30e25219f9"/>
+    <img width=335 height=425 src="https://github.com/ReaVNaiL/ExpenseTrackerApp/assets/59776018/296469d1-d360-4a31-8042-5687e0b29a8d"/>
+</p>
+
+
 In today's fast-paced world, managing personal finances has become increasingly important for individuals and families. The ability to track and control one's expenses is vital for financial success and stability. This document discusses the development of a mobile application called **Budget Tracker App** which aims to provide users with an easy and efficient way to track and manage their expenses. 
 
 ## Background and Motivation
@@ -10,6 +16,10 @@ The idea for the Budget Tracker App emerged from the realization that many peopl
 * The application offers essential user functionality and is designed to serve as a personal financial assistant. It is particularly useful for those who frequently make purchases at stores and need a convenient way to record and monitor their spending habits.
 * One of the most notable features of the Budget Tracker App is its ability to display the content of a receipt directly within the application. 
 * Users can easily add expenses or receipts, which are then stored in a transaction history and displayed in descending order by month.
+* 
+<p>
+    <img width=565 height=425 src="https://github.com/ReaVNaiL/ExpenseTrackerApp/assets/59776018/ed931bee-2160-4237-86f8-88db31a8e63c"/>
+</p>
 
 ## Basic Structure
 The overall structure of the Budget Tracker App is designed to provide a user-friendly experience, featuring a straightforward `Main Activity` with three primary options: Dashboard, Settings, and Exit. These options are easily accessible, allowing users to navigate effortlessly between them at any time.
