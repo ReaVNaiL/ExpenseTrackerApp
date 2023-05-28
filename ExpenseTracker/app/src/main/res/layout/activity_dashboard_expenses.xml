@@ -65,7 +65,7 @@
 
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/bar_chart"
-        android:layout_width="418dp"
+        android:layout_width="match_parent"
         android:layout_height="176dp"
         android:layout_margin="8dp"
         app:layout_constraintBottom_toTopOf="@+id/divider"
@@ -89,7 +89,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/expenses_recycler_view"
-        android:layout_width="417dp"
+        android:layout_width="match_parent"
         android:layout_height="382dp"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"

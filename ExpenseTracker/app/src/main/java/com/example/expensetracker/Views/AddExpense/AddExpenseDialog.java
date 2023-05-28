@@ -137,7 +137,7 @@ public class AddExpenseDialog extends DialogFragment {
         Calendar arg = Calendar.getInstance();
 
         int year = arg.get(Calendar.YEAR);
-        int month = arg.get(Calendar.MONTH) + 1;
+        int month = arg.get(Calendar.MONTH);
         int day = arg.get(Calendar.DAY_OF_MONTH);
 
         int style = AlertDialog.THEME_HOLO_DARK;
@@ -169,6 +169,7 @@ public class AddExpenseDialog extends DialogFragment {
 
                 if (view != null) {
                     ((TextView) view).setTextColor(Color.WHITE);
+                    ((TextView) view).setTextSize(20);
                 }
 
                 return view;
